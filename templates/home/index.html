@@ -1,0 +1,465 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title %}
+    Education &mdash; 关于我们
+{% endblock title %}
+{% block main %}
+    <!--课程分类-->
+    <!--<div id="fh5co-course-categories">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2>课程分类</h2>
+					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-shop"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">科学</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-heart4"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">艺术</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-banknote"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">流行</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-lab2"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">表演</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-photo"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Art &amp; Media</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-home-outline"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Real Estate</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-bubble3"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Language</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-world"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">Web &amp; Programming</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+    <div id="fh5co-course-categories">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2>课程类别</h2>
+					<p>我们有这些这些这些类型的课程呀</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-shop"></i>
+						</span>
+						<div class="desc">
+							<h3><strong><a href="#">绘画</a></strong></h3>
+							<p>教你家熊孩子如何在墙上到处乱话哦</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-heart4"></i>
+						</span>
+						<div class="desc">
+							<h3><strong><a href="#">幼儿心理</a></strong></h3>
+							<p>如何成为一个合格的熊孩子</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-banknote"></i>
+						</span>
+						<div class="desc">
+							<h3><strong><a href="#">算数</a></strong></h3>
+							<p>哦呵呵再也不怕被别人骗钱了</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-lab2"></i>
+						</span>
+						<div class="desc">
+							<h3><strong><a href="#">科学</a></strong></h3>
+							<p>自然科学以及民间科学？？</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-photo"></i>
+						</span>
+						<div class="desc">
+							<h3><strong><a href="#">音乐</a></strong></h3>
+							<p>中国有嘻哈，要从娃娃抓</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-home-outline"></i>
+						</span>
+						<div class="desc">
+							<h3><strong><a href="#">思维训练</a></strong></h3>
+							<p>想不出来了</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-bubble3"></i>
+						</span>
+						<div class="desc">
+							<h3><a href="#">语言</a></h3>
+							<p>用十国语言说：</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 text-center animate-box">
+					<div class="services">
+						<span class="icon">
+							<i class="icon-world"></i>
+						</span>
+						<div class="desc">
+							<h3><strong><a href="#">实践</a></strong></h3>
+							<p>想不出来了2</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!--授课人数-->
+    <div id="fh5co-counter" class="fh5co-counters" style="background-image: url({% static 'home/images/img_bg_4.jpg' %});" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1">
+					<div class="row">
+						<div class="col-md-3 col-sm-6 text-center animate-box">
+							<span class="icon"><i class="icon-world"></i></span>
+							<span class="fh5co-counter js-counter" data-from="0" data-to="3297" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label">Foreign Followers</span>
+						</div>
+						<div class="col-md-3 col-sm-6 text-center animate-box">
+							<span class="icon"><i class="icon-study"></i></span>
+							<span class="fh5co-counter js-counter" data-from="0" data-to="3700" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label">Students Enrolled</span>
+						</div>
+						<div class="col-md-3 col-sm-6 text-center animate-box">
+							<span class="icon"><i class="icon-bulb"></i></span>
+							<span class="fh5co-counter js-counter" data-from="0" data-to="5034" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label">Classes Complete</span>
+						</div>
+						<div class="col-md-3 col-sm-6 text-center animate-box">
+							<span class="icon"><i class="icon-head"></i></span>
+							<span class="fh5co-counter js-counter" data-from="0" data-to="1080" data-speed="5000" data-refresh-interval="50"></span>
+							<span class="fh5co-counter-label">Certified Teachers</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!--课程介绍-->
+    <!--<div id="fh5co-course">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2>精品课程</h2>
+					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="#" class="course-img" style="background-image: url({% static 'home/images/project-1.jpg' %});">
+						</a>
+						<div class="desc">
+							<h3><a href="#">创意美术</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<span><a href="#" class="btn btn-primary btn-sm btn-course">Take A Course</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="#" class="course-img" style="background-image: url({% static 'home/images/project-2.jpg' %});">
+						</a>
+						<div class="desc">
+							<h3><a href="#">科学探索</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<span><a href="#" class="btn btn-primary btn-sm btn-course">Take A Course</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="#" class="course-img" style="background-image: url({% static 'home/images/project-3.jpg'%});">
+						</a>
+						<div class="desc">
+							<h3><a href="#">流行街舞</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<span><a href="#" class="btn btn-primary btn-sm btn-course">Take A Course</a></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="#" class="course-img" style="background-image: url({% static 'home/images/project-4.jpg' %});">
+						</a>
+						<div class="desc">
+							<h3><a href="#">戏剧英语</a></h3>
+							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<span><a href="#" class="btn btn-primary btn-sm btn-course">Take A Course</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>-->
+    <div id="fh5co-course">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+					<h2>我们的课程</h2>
+					<p>巴拉巴拉巴拉巴拉小魔仙课程</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="#" class="course-img" style="background-image: url({% static 'home/images/project-1.jpg' %});">
+						</a>
+						<div class="desc">
+							<h3>英语</h3>
+							<p>主题式教学，将英语生活化，选取和幼儿生活密切相关的主题展开教学，让英语融入点滴生活，让孩子真正学会“用”英语。</p>
+							<span><a href="#modal1" class="btn btn-primary btn-sm btn-course" data-toggle="modal">Take A Course</a></span>
+						</div>
+					</div>
+				</div>
+				<!-- 弹出框开始 -->
+				<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								&times;
+								</button>
+								<h4 class="modal-title" id="myModalLabel">
+										英文课
+								</h4>
+							</div>
+						  <div class="modal-body">
+								 帮助您的孩子顺利起步小学英语课程 ，把字母和单词的学习融化在丰富多彩的儿歌和游戏之中，结合生动的肢体语言、趣味口诀、课堂游戏帮助孩子记忆和书写单词。
+						  </div>
+			        <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			        </div>
+		        </div><!-- /.modal-content -->
+	        </div><!-- /.modal -->
+        </div><!-- 弹出框结束 -->
+
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="#" class="course-img" style="background-image: url({% static 'home/images/project-2.jpg' %});">
+						</a>
+						<div class="desc">
+							<h3><a href="#">绘画</a></h3>
+							<p>按年龄段和绘画基础分为儿童绘画启蒙班（4～5岁）和儿童绘画综合班（6～9岁）。学习彩笔画、蜡笔画、水粉画、线描画等</p>
+							<span><a href="#modal2" class="btn btn-primary btn-sm btn-course" data-toggle="modal">Take A Course</a></span>
+						</div>
+					</div>
+				</div>
+				<!-- 弹出框开始 -->
+				<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								&times;
+								</button>
+								<h4 class="modal-title" id="myModalLabel">
+										绘画课
+								</h4>
+							</div>
+						  <div class="modal-body">
+								 教学利用各种媒体和方法对儿童进行感知教育，如实景、实物观察、图片语言描述联想、听音乐、讲故事、欣赏绘画作品等。
+						  </div>
+			        <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			        </div>
+		        </div><!-- /.modal-content -->
+	        </div><!-- /.modal -->
+        </div><!-- 弹出框结束 -->
+
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="#" class="course-img" style="background-image: url({% static 'home/images/project-3.jpg' %});">
+						</a>
+						<div class="desc">
+							<h3><a href="#">科学</a></h3>
+							<p>教学利用各种媒体和方法对儿童进行科学教育，强调家长的参与性，倡导为儿童提供理想的科学教育环境。</p>
+							<span><a href="#modal3" class="btn btn-primary btn-sm btn-course" data-toggle="modal">Take A Course</a></span>
+						</div>
+					</div>
+				</div>
+				<!-- 弹出框开始 -->
+				<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								&times;
+								</button>
+								<h4 class="modal-title" id="myModalLabel">
+										科学课
+								</h4>
+							</div>
+						  <div class="modal-body">
+								 教学利用各种媒体和方法对儿童进行科学教育，强调家长的参与性，倡导为儿童提供理想的科学教育环境。
+						  </div>
+			        <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			        </div>
+		        </div><!-- /.modal-content -->
+	        </div><!-- /.modal -->
+        </div><!-- 弹出框结束 -->
+
+				<div class="col-md-6 animate-box">
+					<div class="course">
+						<a href="#" class="course-img" style="background-image: url({% static 'home/images/project-4.jpg' %});">
+						</a>
+						<div class="desc">
+							<h3><a href="#">音乐</a></h3>
+							<p>致力于为8个月-5岁的儿童提供专业早期音乐教育课程，强调家长的参与性，倡导为儿童提供理想的音乐环境。</p>
+							<span><a href="#modal4" class="btn btn-primary btn-sm btn-course" data-toggle="modal">Take A Course</a></span>
+						</div>
+					</div>
+				</div>
+				<!-- 弹出框开始 -->
+				<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+								&times;
+								</button>
+								<h4 class="modal-title" id="myModalLabel">
+										音乐
+								</h4>
+							</div>
+						  <div class="modal-body">
+								 致力于为8个月-5岁的儿童提供专业早期音乐教育课程，强调家长的参与性，倡导为儿童提供理想的音乐环境。
+						  </div>
+			        <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+			        </div>
+		        </div><!-- /.modal-content -->
+	        </div><!-- /.modal -->
+        </div><!-- 弹出框结束 -->
+			</div>
+		</div>
+	</div>
+
+{% endblock main %}
+
+{% block gallery %}
+    <!--Gallery展示-->
+    <div id="fh5co-gallery" class="fh5co-bg-section">
+		<div class="row text-center">
+			<h2><span>Instagram Gallery</span></h2>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-padded">
+				<a href="#" class="gallery" style="background-image: url({% static 'home/images/project-5.jpg' %});"></a>
+			</div>
+			<div class="col-md-3 col-padded">
+				<a href="#" class="gallery" style="background-image: url({% static 'home/images/project-2.jpg' %});"></a>
+			</div>
+			<div class="col-md-3 col-padded">
+				<a href="#" class="gallery" style="background-image: url({% static 'home/images/project-3.jpg' %});"></a>
+			</div>
+			<div class="col-md-3 col-padded">
+				<a href="#" class="gallery" style="background-image: url({% static 'home/images/project-4.jpg' %});"></a>
+			</div>
+		</div>
+	</div>
+{% endblock gallery %}

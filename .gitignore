@@ -1,0 +1,10 @@
+# My Configuration
+.DS_Store
+.idea
+*.sql
+*.ndm
+
+# Python template
+__pycache__/
+*.py[cod]
+*$py.class
