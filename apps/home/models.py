@@ -23,8 +23,8 @@ class User(AbstractUser):
 class Banner(models.Model):
     title = models.CharField(max_length=100, verbose_name='标题')
     image = models.ImageField(max_length=100, upload_to='banner/%Y/%m', verbose_name='轮播图')
-    url = models.URLField(max_length=200, verbose_name='访问地址')
-    index = models.IntegerField(default=100, verbose_name='顺序')
+    # url = models.URLField(max_length=200, verbose_name='访问地址')
+    index = models.IntegerField(default=100, verbose_name='轮播顺序')
     date_joined = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
 
     class Meta:
@@ -59,7 +59,8 @@ class Course(models.Model):
 class Category(models.Model):
     name = models.CharField(max_length=50, verbose_name='课程分类')
     desc = models.CharField(max_length=300, verbose_name='分类描述')
-    image = models.ImageField(max_length=100, upload_to='category/%Y/%m', verbose_name='分类图片')
+    # image = models.ImageField(max_length=100, upload_to='category/%Y/%m', verbose_name='分类图片')
+    icon_name = models.CharField(max_length=50, null=True, verbose_name='字体图标')
     date_joined = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
     # courses = models.ForeignKey('Course', verbose_name='包含课程')
 
@@ -78,12 +79,14 @@ class Teacher(models.Model):
     intro = models.CharField(max_length=300, verbose_name='教师简介')
     detail = models.CharField(max_length=600, verbose_name='教师详情')
     date_joined = models.DateTimeField(default=datetime.now, verbose_name='添加时间')
+    index = models.IntegerField(default=100, verbose_name='教师排序')
     course = models.ForeignKey('Course', verbose_name='所教课程')
 
     class Meta:
         # db_table = 'teacher'
         verbose_name = '教师'
         verbose_name_plural = verbose_name
+        ordering = ['index']
 
     def __str__(self):
         return self.name

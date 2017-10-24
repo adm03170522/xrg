@@ -9,23 +9,23 @@ class UserAdmin(admin.ModelAdmin):
 
 
 class BannerAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['title', 'image', 'index']
 
 
 class CourseAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['name', 'desc', 'detail', 'image', 'category']
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['name', 'desc', 'icon_name']
 
 
 class TeacherAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['name', 'intro', 'detail', 'course', 'index']
 
 
 class CustomerInfoAdmin(admin.ModelAdmin):
-    pass
+    list_display = ['name', 'age', 'phone_num', 'comment']
 
 
 admin.site.register(User, UserAdmin)

@@ -65,6 +65,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # 添加处理media的处理器
+                'django.template.context_processors.media'
             ],
         },
     },
@@ -126,3 +128,14 @@ STATIC_URL = '/static/'
 
 # 指定静态文件收集目录
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+# 媒体文件配置
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# 基本信息配置
+SITE_ADDRESS = '绵阳市涪城区美立方100号'
+SITE_TEL = '0816-2345789'
+SITE_EMAIL = 'postmaster@xiaorenguo.club'
+SITE_WECHAT = '官方微信公众号'

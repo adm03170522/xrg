@@ -10,58 +10,62 @@
 				<div class="col-md-5 col-md-push-1 animate-box">
 
 					<div class="fh5co-contact-info">
-						<h3>Contact Information</h3>
+						<h3>联系信息</h3>
 						<ul>
-							<li class="address">198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-							<li class="phone"><a href="tel://1234567920">+ 1235 2355 98</a></li>
-							<li class="email"><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-							<li class="url"><a href="http://freehtml5.co">freeHTML5.co</a></li>
+							<li class="address">{{ settings.SITE_ADDRESS }}</li>
+							<li class="phone">{{ settings.SITE_TEL }}</li>
+							<li class="email"><a href="mailto:postmaster@xiaorenguo.club">{{ settings.SITE_EMAIL }}</a></li>
+							<li class="url">{{ settings.SITE_WECHAT }}</li>
+                            <li class="image"><img src="{{ MEDIA_URL }}weixin/wechat.png" /></li>
 						</ul>
 					</div>
 
 				</div>
 				<div class="col-md-6 animate-box">
-					<h3>Get In Touch</h3>
-					<form action="#">
+					<h3>联系我们</h3>
+					<form action="{% url 'home:contact' %}" method="post">
 						<div class="row form-group">
 							<div class="col-md-6">
 								<!-- <label for="fname">First Name</label> -->
-								<input type="text" id="fname" class="form-control" placeholder="Your firstname">
-							</div>
-							<div class="col-md-6">
-								<!-- <label for="lname">Last Name</label> -->
-								<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+{#								<input name="user_name" type="text" id="fname" class="form-control" placeholder="学员姓名">#}
+                                {{ customer_info_form.user_name }}
+                                {{ customer_info_form.user_name.errors }}
 							</div>
 						</div>
 
 						<div class="row form-group">
-							<div class="col-md-12">
+							<div class="col-md-6">
 								<!-- <label for="email">Email</label> -->
-								<input type="text" id="email" class="form-control" placeholder="Your email address">
+{#                                    <input name="age" type="text" id="email" class="form-control" placeholder="学员年龄">#}
+                                {{ customer_info_form.age }}
+                                {{ customer_info_form.age.errors }}
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="subject">Subject</label> -->
-								<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+{#								<input name="phone_num" type="text" id="subject" class="form-control" placeholder="联系电话">#}
+                                {{ customer_info_form.phone_num }}
+                                {{ customer_info_form.phone_num.errors }}
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="message">Message</label> -->
-								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+{#								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="预约试听课程...比如：绘画课"></textarea>#}
+                                {{ customer_info_form.message }}
+                                {{ customer_info_form.message.errors }}
 							</div>
 						</div>
 						<div class="form-group">
-							<input type="submit" value="Send Message" class="btn btn-primary">
+							<input type="submit" value="预约试听" class="btn btn-primary">
 						</div>
-
+                        {% csrf_token %}
 					</form>
 				</div>
 			</div>
-
 		</div>
 	</div>
 {% endblock main %}

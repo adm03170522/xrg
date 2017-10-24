@@ -1,151 +1,263 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
-{% block title  %}
+{% block customer_css %}
+    <style>
+        /*以下是对bootstrap中tooltip的默认属性进行重新设定*/
+        .modal-open {
+            overflow: hidden;
+        }
+
+        .modal {
+            display: none;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1050;
+            -webkit-overflow-scrolling: touch;
+            outline: 0;
+        }
+
+        .modal.fade .modal-dialog {
+            -webkit-transform: translate(0, -25%);
+            -ms-transform: translate(0, -25%);
+            -o-transform: translate(0, -25%);
+            transform: translate(0, -25%);
+            -webkit-transition: -webkit-transform 0.3s ease-out;
+            -moz-transition: -moz-transform 0.3s ease-out;
+            -o-transition: -o-transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
+        }
+
+        .modal.in .modal-dialog {
+            -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            -o-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+
+        .modal-open .modal {
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .modal-dialog {
+            position: relative;
+            width: auto;
+            margin: 10px;
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #ebebeb;
+            border: 1px solid #999;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+            background-clip: padding-box;
+            outline: 0;
+            font-family: YouYuan;
+            font-color: #666666;
+        }
+
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1040;
+            background-color: #000;
+        }
+
+        .modal-backdrop.fade {
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+
+        .modal-backdrop.in {
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+        }
+
+        .modal-header {
+            padding: 15px;
+            border-bottom: 1px solid #999999;
+            font-weight: bold;
+            min-height: 16.42857px;
+        }
+
+        .modal-header .close {
+            margin-top: -2px;
+        }
+
+        .modal-title {
+            margin: 0;
+            line-height: 1.42857;
+            font-weight: bold;
+            text-align: center;
+            font-size: 25px;
+            font-family: Microsoft Yahei;
+            color: #74787c;
+        }
+
+        .modal-body {
+            position: relative;
+            padding: 30px 30px 50px;
+        / / max-height: 800 px;
+        }
+
+        .modal-footer {
+        / / padding: 150 px 30 px 30 px;
+            padding: 30px;
+            text-align: right;
+            border-top: none;
+        }
+
+        .modal-footer:before, .modal-footer:after {
+            content: " ";
+            display: table;
+        }
+
+        .modal-footer:after {
+            clear: both;
+        }
+
+        .modal-footer .btn + .btn {
+            margin-left: 5px;
+            margin-bottom: 0;
+        }
+
+        .modal-footer .btn-group .btn + .btn {
+            margin-left: -1px;
+        }
+
+        .modal-footer .btn-block + .btn-block {
+            margin-left: 0;
+        }
+
+        .modal-scrollbar-measure {
+            position: absolute;
+            top: -9999px;
+            width: 50px;
+            height: 50px;
+            overflow: scroll;
+        }
+
+        @media (min-width: 768px) {
+            .modal-dialog {
+                width: auto;
+            / / margin: 30 px auto;
+                margin: 150px
+            }
+
+            .modal-content {
+                -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            }
+
+            .modal-sm {
+                width: 300px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .modal-lg {
+                width: 900px;
+            }
+        }
+    </style>
+{% endblock customer_css %}
+{% block title %}
     Education &mdash; 精品课程
 {% endblock title %}
+
+
 {% block main %}
     <div id="fh5co-course">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>我们的课程</h2>
-					<p>巴拉巴拉巴拉巴拉小魔仙课程</p>
-				</div>
-			</div>
+        <div class="container">
+            <div class="row animate-box">
+                <div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+                    <h2>我们的课程</h2>
+                    <p>巴拉巴拉巴拉巴拉小魔仙课程</p>
+                </div>
+            </div>
 
-			<div class="row">
-				<div class="col-md-6 animate-box">
-					<div class="course">
-						<a href="#" class="course-img" style="background-image: url({% static 'home/images/project-1.jpg' %});">
-						</a>
-						<div class="desc">
-							<h3>英语</h3>
-							<p>主题式教学，将英语生活化，选取和幼儿生活密切相关的主题展开教学，让英语融入点滴生活，让孩子真正学会“用”英语。</p>
-							<span><a href="#modal1" class="btn btn-primary btn-sm btn-course" data-toggle="modal">Take A Course</a></span>
-						</div>
-					</div>
-				</div>
-				<!-- 弹出框开始 -->
-				<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-								&times;
-								</button>
-								<h4 class="modal-title" id="myModalLabel">
-										英文课
-								</h4>
-							</div>
-						  <div class="modal-body">
-								 帮助您的孩子顺利起步小学英语课程 ，把字母和单词的学习融化在丰富多彩的儿歌和游戏之中，结合生动的肢体语言、趣味口诀、课堂游戏帮助孩子记忆和书写单词。
-						  </div>
-			        <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-			        </div>
-		        </div><!-- /.modal-content -->
-	        </div><!-- /.modal -->
-        </div><!-- 弹出框结束 -->
-
-				<div class="col-md-6 animate-box">
-					<div class="course">
-						<a href="#" class="course-img" style="background-image: url({% static 'home/images/project-2.jpg' %});">
-						</a>
-						<div class="desc">
-							<h3><a href="#">绘画</a></h3>
-							<p>按年龄段和绘画基础分为儿童绘画启蒙班（4～5岁）和儿童绘画综合班（6～9岁）。学习彩笔画、蜡笔画、水粉画、线描画等</p>
-							<span><a href="#modal2" class="btn btn-primary btn-sm btn-course" data-toggle="modal">Take A Course</a></span>
-						</div>
-					</div>
-				</div>
-				<!-- 弹出框开始 -->
-				<div class="modal fade" id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-								&times;
-								</button>
-								<h4 class="modal-title" id="myModalLabel">
-										绘画课
-								</h4>
-							</div>
-						  <div class="modal-body">
-								 教学利用各种媒体和方法对儿童进行感知教育，如实景、实物观察、图片语言描述联想、听音乐、讲故事、欣赏绘画作品等。
-						  </div>
-			        <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-			        </div>
-		        </div><!-- /.modal-content -->
-	        </div><!-- /.modal -->
-        </div><!-- 弹出框结束 -->
-
-				<div class="col-md-6 animate-box">
-					<div class="course">
-						<a href="#" class="course-img" style="background-image: url({% static 'home/images/project-3.jpg' %});">
-						</a>
-						<div class="desc">
-							<h3><a href="#">科学</a></h3>
-							<p>教学利用各种媒体和方法对儿童进行科学教育，强调家长的参与性，倡导为儿童提供理想的科学教育环境。</p>
-							<span><a href="#modal3" class="btn btn-primary btn-sm btn-course" data-toggle="modal">Take A Course</a></span>
-						</div>
-					</div>
-				</div>
-				<!-- 弹出框开始 -->
-				<div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-								&times;
-								</button>
-								<h4 class="modal-title" id="myModalLabel">
-										科学课
-								</h4>
-							</div>
-						  <div class="modal-body">
-								 教学利用各种媒体和方法对儿童进行科学教育，强调家长的参与性，倡导为儿童提供理想的科学教育环境。
-						  </div>
-			        <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-			        </div>
-		        </div><!-- /.modal-content -->
-	        </div><!-- /.modal -->
-        </div><!-- 弹出框结束 -->
-
-				<div class="col-md-6 animate-box">
-					<div class="course">
-						<a href="#" class="course-img" style="background-image: url({% static 'home/images/project-4.jpg' %});">
-						</a>
-						<div class="desc">
-							<h3><a href="#">音乐</a></h3>
-							<p>致力于为8个月-5岁的儿童提供专业早期音乐教育课程，强调家长的参与性，倡导为儿童提供理想的音乐环境。</p>
-							<span><a href="#modal4" class="btn btn-primary btn-sm btn-course" data-toggle="modal">Take A Course</a></span>
-						</div>
-					</div>
-				</div>
-				<!-- 弹出框开始 -->
-				<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-								&times;
-								</button>
-								<h4 class="modal-title" id="myModalLabel">
-										音乐
-								</h4>
-							</div>
-						  <div class="modal-body">
-								 致力于为8个月-5岁的儿童提供专业早期音乐教育课程，强调家长的参与性，倡导为儿童提供理想的音乐环境。
-						  </div>
-			        <div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-			        </div>
-		        </div><!-- /.modal-content -->
-	        </div><!-- /.modal -->
-        </div><!-- 弹出框结束 -->
-			</div>
-		</div>
-	</div>
+            <div class="row">
+                {% for course in all_courses %}
+                    <div class="col-md-6 animate-box">
+                        <div class="course">
+                            <a href="#" class="course-img"
+                               style="background-image: url('{{ MEDIA_URL }}{{ course.image }}');">
+                            </a>
+                            <div class="desc">
+                                <h3>{{ course.name }}</h3>
+                                <p>{{ course.desc }}</p>
+                                <span><a href="#modal{{ course.id }}" class="btn btn-primary btn-sm btn-course"
+                                         data-toggle="modal">课程详情</a></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 弹出框开始 -->
+                    <div class="modal fade" id="modal{{ course.id }}" tabindex="-1" role="dialog"
+                         aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                        &times;
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">
+                                        {{ course.name }}
+                                    </h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="col-md-6 animate-box" style="height: 300px;">
+                                        <p>{{ course.detail }}</p>
+                                    </div>
+                                    <div class="col-md-6" style="height: 300px;">
+                                        <div id="myCarousel{{ course.id }}" class="carousel slide" data-ride="carousel">
+                                            <!-- 轮播（Carousel）指标 -->
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#myCarousel{{ course.id }}" data-slide-to="0"
+                                                    class="active"></li>
+                                                <li data-target="#myCarousel{{ course.id }}" data-slide-to="1"></li>
+                                                <li data-target="#myCarousel{{ course.id }}" data-slide-to="2"></li>
+                                            </ol>
+                                            <!-- 轮播（Carousel）项目 -->
+                                            <div class="carousel-inner">
+                                                    <div class="item active">
+                                                        <img src="{{ MEDIA_URL }}banner/project-5.jpg"
+                                                             alt="First slide">
+                                                    </div>
+                                                    <div class="item">
+                                                    <img src="{{ MEDIA_URL }}banner/project-6.jpg" alt="Second slide">
+                                                </div>
+                                                    <div class="item">
+                                                    <img src="{{ MEDIA_URL }}banner/project-7.jpg" alt="Third slide">
+                                                </div>
+                                            </div>
+                                            <!-- 轮播（Carousel）导航 -->
+                                            <a class="carousel-control left" href="#myCarousel{{ course.id }}"
+                                               data-slide="prev">&lsaquo;</a>
+                                            <a class="carousel-control right" href="#myCarousel{{ course.id }}"
+                                               data-slide="next">&rsaquo;</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal"
+                                            style="margin-top: 30px;">关闭
+                                    </button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal -->
+                    </div><!-- 弹出框结束 -->
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endblock main %}
