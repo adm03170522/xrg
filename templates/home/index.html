@@ -283,7 +283,9 @@
                             <div class="desc">
                                 <h3>{{ course.name }}</h3>
                                 <p>{{ course.desc }}</p>
-                                <span><a href="#modal{{ course.id }}" class="btn btn-primary btn-sm btn-course"
+                                <!--<span><a href="#modal{{ course.id }}" class="btn btn-primary btn-sm btn-course"
+                                         data-toggle="modal">更多详情</a></span>-->
+                                <span><a href="{% url 'home:course' %}" class="btn btn-primary btn-sm btn-course"
                                          data-toggle="modal">更多详情</a></span>
                             </div>
                         </div>
@@ -365,11 +367,11 @@
             </div>
             <div class="col-md-3 col-padded">
                 <a href="#" class="gallery"
-                   style="background-image: url({% static 'home/images/project-3.jpg' %});"></a>
+                   style="background-image: url({% static 'home/images/project-2.jpg' %});"></a>
             </div>
             <div class="col-md-3 col-padded">
                 <a href="#" class="gallery"
-                   style="background-image: url({% static 'home/images/project-4.jpg' %});"></a>
+                   style="background-image: url({% static 'home/images/project-2.jpg' %});"></a>
             </div>
         </div>
     </div>
